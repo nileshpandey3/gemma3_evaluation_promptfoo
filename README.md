@@ -13,3 +13,6 @@
 - Example Test Report view
 ![Pass](test_report.png)
 ![Fail](fail.png)
+
+## Troubleshooting
+- Make sure you are authenticated to hugging face and have the HF token set as env var in your session
