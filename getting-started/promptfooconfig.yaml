@@ -1,4 +1,4 @@
-description: 'Gemma Testing'
+description: 'Gemma3 Testing'
 
 # Python function as a provider for response
 providers:
@@ -18,6 +18,6 @@ defaultTest:
 tests:
   - description: 'Test if output meets our expected answer'
     assert:
-      - type: icontains-any
+      - type: icontains-any 
         value: 'Google.com was launched on **May 15, 2003**. '
 
