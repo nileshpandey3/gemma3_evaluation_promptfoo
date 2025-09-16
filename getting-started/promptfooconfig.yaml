@@ -1,0 +1,23 @@
+description: 'Gemma Testing'
+
+# Python function as a provider for response
+providers:
+  - id: 'file://google_gemma_3_research.py'
+
+prompts:
+  - 'Whats the definition of velocity?'
+
+# Set properties for all tests
+defaultTest:
+  options:
+    provider:
+      text:
+        id: huggingface:text-generation:google/gemma-3-270m-it
+
+# Test Case
+tests:
+  - description: 'Test if output meets our expected answer'
+    assert:
+      - type: contains
+        value: 'The definition of velocity is the rate at which an object moves in a given direction.'
+
