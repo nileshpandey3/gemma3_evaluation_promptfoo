@@ -5,7 +5,7 @@ providers:
   - id: 'file://google_gemma_3_research.py'
 
 prompts:
-  - 'Whats the definition of velocity?'
+  - 'When was google.com launched?'
 
 # Set properties for all tests
 defaultTest:
@@ -18,6 +18,6 @@ defaultTest:
 tests:
   - description: 'Test if output meets our expected answer'
     assert:
-      - type: contains
-        value: 'The definition of velocity is the rate at which an object moves in a given direction.'
+      - type: icontains-any
+        value: 'Google.com was launched on **May 15, 2003**. '
 
